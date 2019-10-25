@@ -122,8 +122,8 @@ const eventScreen = React.createClass({
     }
 
     return (
-      <div id="wrapper">
-          <nav className="navbar navbar-default navbar-static-top" role="navigation">
+      <div>
+          <nav className="navbar navbar-inverse navbar-static-top" role="navigation">
             <NavBar></NavBar>
 
             <Sidebar

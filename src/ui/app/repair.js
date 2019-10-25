@@ -46,10 +46,10 @@ jQuery(document).ready(function($){
     }
   }
 
-  let currentCluster: string = $.urlParam('currentCluster');
-  if(!currentCluster) {
+  let currentCluster = $.urlParam('currentCluster');
+  if(!currentCluster || currentCluster == "null") {
     currentCluster = 'all';
-  }
+  } 
 
   ReactDOM.render(
     React.createElement(repairScreen, {clusterNames, addRepairSubject, addRepairResult, currentCluster, repairs, logoutSubject: logoutSubject, logoutResult: logoutResult, deleteSubject: deleteRepairSubject,

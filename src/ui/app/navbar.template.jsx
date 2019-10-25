@@ -14,7 +14,6 @@
 //  limitations under the License.
 
 import React from "react";
-import Label from 'react-bootstrap/lib/Label';
 import Modal from 'react-bootstrap/lib/Modal';
 import Button from 'react-bootstrap/lib/Button';
 
@@ -34,23 +33,23 @@ const NavBar = React.createClass({
   render: function() {
     const floatRight = {float: 'right'};
     const smallFont = {fontSize: 'x-small'};
+    const boldFont = {fontWeight: 'bold'};
+    const lightFont = {fontWeight: '100'};
     return (
-        <div className="row">
+      <div className="row">
         <div className="col-lg-8">
             <div className="navbar-header">
-              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span className="sr-only">Toggle navigation</span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-              </button>
-              <Button onClick={this.open} bsStyle="link" bsSize="xsmall" className="navbar-brand">Cassandra Reaper <span style={smallFont}>##VERSION##</span></Button>
-              </div>
-              </div>
-              <div className="col-lg-4">
-                <span className="navbar-brand" style={floatRight}><Button href="https://github.com/thelastpickle/cassandra-reaper/issues/new?body=**Spotted on ##VERSION## (##GIT-SHA##)**" bsStyle="warning" bsSize="xsmall">Report a bug</Button>
-              </span>
+              <a className="navbar-brand" href="#" onClick={this.open}style={lightFont}>Cassandra<span style={boldFont}>Reaper</span> <span style={smallFont}>##VERSION##</span></a>
             </div>
+        </div>
+        <div className="col-lg-4">
+        <div className="navbar-collapse collapse navbar-inverse-collapse">
+            <ul className="nav navbar-nav" style={floatRight}>
+              <li></li>
+              <li><a href="https://github.com/thelastpickle/cassandra-reaper/issues/new?body=**Spotted on ##VERSION## (##GIT-SHA##)**">Report a bug</a></li>
+            </ul>
+        </div>
+        </div>
             <Modal show={this.state.showModal} onHide={this.close}>
                 <Modal.Header closeButton>
                   <Modal.Title>Version ##VERSION##</Modal.Title>

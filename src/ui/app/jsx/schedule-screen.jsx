@@ -53,7 +53,7 @@ const ScheduleScreen = React.createClass({
 
     return (
     <div id="wrapper">
-        <nav className="navbar navbar-default navbar-static-top" role="navigation" style={navStyle}>
+        <nav className="navbar navbar-inverse navbar-static-top" role="navigation" style={navStyle}>
             <NavBar></NavBar>
 
             <Sidebar clusterNames={this.props.clusterNames} currentCluster={this.state.currentCluster}

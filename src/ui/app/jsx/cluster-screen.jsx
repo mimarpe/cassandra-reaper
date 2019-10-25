@@ -69,25 +69,25 @@ const ClusterScreen = React.createClass({
 
   return (
         <div>
-        <nav className="navbar navbar-default navbar-static-top" role="navigation" style={navStyle}>
-            <NavBar></NavBar>
+          <nav className="navbar navbar-inverse navbar-static-top" role="navigation" style={navStyle}>
+              <NavBar></NavBar>
 
-            <Sidebar clusterNames={this.props.clusterNames} currentCluster={this.state.currentCluster} 
-                loginSubject={this.props.loginSubject} loginResult={this.props.loginResult}
-                logoutSubject={this.props.logoutSubject} logoutResult={this.props.logoutResult}> </Sidebar>
-        </nav>
+              <Sidebar clusterNames={this.props.clusterNames} currentCluster={this.state.currentCluster} 
+                  loginSubject={this.props.loginSubject} loginResult={this.props.loginResult}
+                  logoutSubject={this.props.logoutSubject} logoutResult={this.props.logoutResult}> </Sidebar>
+          </nav>
 
-        <div id="page-wrapper">
-            <div className="row">
-                <ServerStatus statusObservableTimer={this.props.statusObservableTimer}></ServerStatus>
-            </div>
-            <div className="row">
-                <div className="col-lg-12">
-                    <h1 className="page-header">Cluster</h1>
-                </div>
-            </div>
-            {content}
-        </div>
+          <div id="page-wrapper">
+              <div className="row">
+                  <ServerStatus statusObservableTimer={this.props.statusObservableTimer}></ServerStatus>
+              </div>
+              <div className="row">
+                  <div className="col-lg-12">
+                      <h1 className="page-header">Cluster</h1>
+                  </div>
+              </div>
+              {content}
+          </div>
         </div>
     );
   }

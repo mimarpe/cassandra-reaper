@@ -39,8 +39,8 @@ jQuery(document).ready(function($){
     }
   }
 
-  let currentCluster: string = $.urlParam('currentCluster');
-  if(!currentCluster) {
+  let currentCluster = $.urlParam('currentCluster');
+  if(!currentCluster || currentCluster == "null") {
     currentCluster = 'all';
   } 
 
